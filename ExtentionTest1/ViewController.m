@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	self.txtField.frame = CGRectMake(20, 20, 300, 44);
 }
 
 - (void)didReceiveMemoryWarning {

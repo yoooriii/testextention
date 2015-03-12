@@ -16,27 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSs-fo-VXW">
-                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="275" id="8cC-U0-RoA"/>
-                                    <constraint firstAttribute="height" constant="30" id="RzY-bz-qW3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8cC-U0-RoA"/>
-                                        <exclude reference="RzY-bz-qW3"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="8cC-U0-RoA"/>
-                                        <include reference="RzY-bz-qW3"/>
-                                    </mask>
-                                </variation>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozL-5t-ElX">
                                 <rect key="frame" x="29" y="550" width="122" height="30"/>
                                 <state key="normal" title="do smth">
@@ -49,42 +28,23 @@
                                     <action selector="actDoSmth:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VTV-vN-lzD"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ww" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yOK-sO-0wl">
+                                <rect key="frame" x="119" y="200" width="292" height="30"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.13041286267058805" green="1" blue="0.13549174838341349" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="aSs-fo-VXW" secondAttribute="centerX" id="2mv-AE-iM4">
-                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
-                            </constraint>
-                            <constraint firstAttribute="centerY" secondItem="aSs-fo-VXW" secondAttribute="centerY" id="IgX-J3-PnD">
-                                <variation key="heightClass=compact-widthClass=compact" constant="30"/>
-                            </constraint>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="aSs-fo-VXW"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="2mv-AE-iM4"/>
-                                <exclude reference="IgX-J3-PnD"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="aSs-fo-VXW"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="2mv-AE-iM4"/>
-                                <include reference="IgX-J3-PnD"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
-                        <outlet property="txtField" destination="aSs-fo-VXW" id="yzL-lh-3Lf"/>
+                        <outlet property="txtField" destination="yOK-sO-0wl" id="WBk-Xm-KOq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288" y="478.5"/>
+            <point key="canvasLocation" x="288" y="478"/>
         </scene>
     </scenes>
 </document>

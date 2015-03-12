@@ -19,6 +19,11 @@
 		6EAE6B401AB076F3004346FB /* LeeLooExtAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6EAE6B351AB076F3004346FB /* LeeLooExtAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6EAE6B5B1AB0B25F004346FB /* buratin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EAE6B5A1AB0B25E004346FB /* buratin.jpg */; };
 		6EAE6B5D1AB0B37A004346FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6EAE6B5C1AB0B37A004346FB /* InfoPlist.strings */; };
+		E2DD9C3A1AB1704A00658A06 /* DocumentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DD9C391AB1704A00658A06 /* DocumentPickerViewController.m */; };
+		E2DD9C3C1AB1704A00658A06 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2DD9C3B1AB1704A00658A06 /* MainInterface.storyboard */; };
+		E2DD9C481AB1704A00658A06 /* FileProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DD9C471AB1704A00658A06 /* FileProvider.m */; };
+		E2DD9C4B1AB1704A00658A06 /* LooDocProviderFileProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E2DD9C411AB1704A00658A06 /* LooDocProviderFileProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E2DD9C4E1AB1704A00658A06 /* LooDocProvider.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E2DD9C331AB1704900658A06 /* LooDocProvider.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,20 @@
 			remoteGlobalIDString = 6EAE6B341AB076F3004346FB;
 			remoteInfo = LeeLooExtAction;
 		};
+		E2DD9C491AB1704A00658A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EAE6B001AB07682004346FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2DD9C401AB1704A00658A06;
+			remoteInfo = LooDocProviderFileProvider;
+		};
+		E2DD9C4C1AB1704A00658A06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EAE6B001AB07682004346FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2DD9C321AB1704900658A06;
+			remoteInfo = LooDocProvider;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +64,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				E2DD9C4E1AB1704A00658A06 /* LooDocProvider.appex in Embed App Extensions */,
+				E2DD9C4B1AB1704A00658A06 /* LooDocProviderFileProvider.appex in Embed App Extensions */,
 				6EAE6B401AB076F3004346FB /* LeeLooExtAction.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -74,6 +95,17 @@
 		6EAE6B5A1AB0B25E004346FB /* buratin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = buratin.jpg; sourceTree = "<group>"; };
 		6EAE6B5C1AB0B37A004346FB /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		6EAE6B5E1AB0B705004346FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E2DD9C331AB1704900658A06 /* LooDocProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LooDocProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2DD9C361AB1704A00658A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2DD9C371AB1704A00658A06 /* LooDocProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LooDocProvider.entitlements; sourceTree = "<group>"; };
+		E2DD9C381AB1704A00658A06 /* DocumentPickerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocumentPickerViewController.h; sourceTree = "<group>"; };
+		E2DD9C391AB1704A00658A06 /* DocumentPickerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocumentPickerViewController.m; sourceTree = "<group>"; };
+		E2DD9C3B1AB1704A00658A06 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		E2DD9C411AB1704A00658A06 /* LooDocProviderFileProvider.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LooDocProviderFileProvider.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2DD9C441AB1704A00658A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2DD9C451AB1704A00658A06 /* LooDocProviderFileProvider.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LooDocProviderFileProvider.entitlements; sourceTree = "<group>"; };
+		E2DD9C461AB1704A00658A06 /* FileProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileProvider.h; sourceTree = "<group>"; };
+		E2DD9C471AB1704A00658A06 /* FileProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileProvider.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +130,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2DD9C301AB1704900658A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DD9C3E1AB1704A00658A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -105,9 +151,11 @@
 			isa = PBXGroup;
 			children = (
 				6EAE6B5E1AB0B705004346FB /* README.md */,
-				6EAE6B361AB076F3004346FB /* LeeLooExtAction */,
 				6EAE6B0A1AB07682004346FB /* ExtentionTest1 */,
+				6EAE6B361AB076F3004346FB /* LeeLooExtAction */,
 				6EAE6B241AB07682004346FB /* ExtentionTest1Tests */,
+				E2DD9C341AB1704900658A06 /* LooDocProvider */,
+				E2DD9C421AB1704A00658A06 /* LooDocProviderFileProvider */,
 				6EAE6B091AB07682004346FB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +166,8 @@
 				6EAE6B081AB07682004346FB /* ExtentionTest1.app */,
 				6EAE6B211AB07682004346FB /* ExtentionTest1Tests.xctest */,
 				6EAE6B351AB076F3004346FB /* LeeLooExtAction.appex */,
+				E2DD9C331AB1704900658A06 /* LooDocProvider.appex */,
+				E2DD9C411AB1704A00658A06 /* LooDocProviderFileProvider.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +234,45 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E2DD9C341AB1704900658A06 /* LooDocProvider */ = {
+			isa = PBXGroup;
+			children = (
+				E2DD9C381AB1704A00658A06 /* DocumentPickerViewController.h */,
+				E2DD9C391AB1704A00658A06 /* DocumentPickerViewController.m */,
+				E2DD9C3B1AB1704A00658A06 /* MainInterface.storyboard */,
+				E2DD9C351AB1704900658A06 /* Supporting Files */,
+			);
+			path = LooDocProvider;
+			sourceTree = "<group>";
+		};
+		E2DD9C351AB1704900658A06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2DD9C361AB1704A00658A06 /* Info.plist */,
+				E2DD9C371AB1704A00658A06 /* LooDocProvider.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E2DD9C421AB1704A00658A06 /* LooDocProviderFileProvider */ = {
+			isa = PBXGroup;
+			children = (
+				E2DD9C461AB1704A00658A06 /* FileProvider.h */,
+				E2DD9C471AB1704A00658A06 /* FileProvider.m */,
+				E2DD9C431AB1704A00658A06 /* Supporting Files */,
+			);
+			path = LooDocProviderFileProvider;
+			sourceTree = "<group>";
+		};
+		E2DD9C431AB1704A00658A06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E2DD9C441AB1704A00658A06 /* Info.plist */,
+				E2DD9C451AB1704A00658A06 /* LooDocProviderFileProvider.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +289,8 @@
 			);
 			dependencies = (
 				6EAE6B3F1AB076F3004346FB /* PBXTargetDependency */,
+				E2DD9C4A1AB1704A00658A06 /* PBXTargetDependency */,
+				E2DD9C4D1AB1704A00658A06 /* PBXTargetDependency */,
 			);
 			name = ExtentionTest1;
 			productName = ExtentionTest1;
@@ -241,6 +332,40 @@
 			productReference = 6EAE6B351AB076F3004346FB /* LeeLooExtAction.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		E2DD9C321AB1704900658A06 /* LooDocProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2DD9C541AB1704A00658A06 /* Build configuration list for PBXNativeTarget "LooDocProvider" */;
+			buildPhases = (
+				E2DD9C2F1AB1704900658A06 /* Sources */,
+				E2DD9C301AB1704900658A06 /* Frameworks */,
+				E2DD9C311AB1704900658A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LooDocProvider;
+			productName = LooDocProvider;
+			productReference = E2DD9C331AB1704900658A06 /* LooDocProvider.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		E2DD9C401AB1704A00658A06 /* LooDocProviderFileProvider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2DD9C531AB1704A00658A06 /* Build configuration list for PBXNativeTarget "LooDocProviderFileProvider" */;
+			buildPhases = (
+				E2DD9C3D1AB1704A00658A06 /* Sources */,
+				E2DD9C3E1AB1704A00658A06 /* Frameworks */,
+				E2DD9C3F1AB1704A00658A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LooDocProviderFileProvider;
+			productName = LooDocProviderFileProvider;
+			productReference = E2DD9C411AB1704A00658A06 /* LooDocProviderFileProvider.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -258,6 +383,12 @@
 						TestTargetID = 6EAE6B071AB07682004346FB;
 					};
 					6EAE6B341AB076F3004346FB = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					E2DD9C321AB1704900658A06 = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					E2DD9C401AB1704A00658A06 = {
 						CreatedOnToolsVersion = 6.2;
 					};
 				};
@@ -278,6 +409,8 @@
 				6EAE6B071AB07682004346FB /* ExtentionTest1 */,
 				6EAE6B201AB07682004346FB /* ExtentionTest1Tests */,
 				6EAE6B341AB076F3004346FB /* LeeLooExtAction */,
+				E2DD9C321AB1704900658A06 /* LooDocProvider */,
+				E2DD9C401AB1704A00658A06 /* LooDocProviderFileProvider */,
 			);
 		};
 /* End PBXProject section */
@@ -310,6 +443,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2DD9C311AB1704900658A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DD9C3C1AB1704A00658A06 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DD9C3F1AB1704A00658A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -339,6 +487,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E2DD9C2F1AB1704900658A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DD9C3A1AB1704A00658A06 /* DocumentPickerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2DD9C3D1AB1704A00658A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2DD9C481AB1704A00658A06 /* FileProvider.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -351,6 +515,16 @@
 			isa = PBXTargetDependency;
 			target = 6EAE6B341AB076F3004346FB /* LeeLooExtAction */;
 			targetProxy = 6EAE6B3E1AB076F3004346FB /* PBXContainerItemProxy */;
+		};
+		E2DD9C4A1AB1704A00658A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2DD9C401AB1704A00658A06 /* LooDocProviderFileProvider */;
+			targetProxy = E2DD9C491AB1704A00658A06 /* PBXContainerItemProxy */;
+		};
+		E2DD9C4D1AB1704A00658A06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E2DD9C321AB1704900658A06 /* LooDocProvider */;
+			targetProxy = E2DD9C4C1AB1704A00658A06 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -530,6 +704,58 @@
 			};
 			name = Release;
 		};
+		E2DD9C4F1AB1704A00658A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LooDocProvider/LooDocProvider.entitlements;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LooDocProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E2DD9C501AB1704A00658A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LooDocProvider/LooDocProvider.entitlements;
+				INFOPLIST_FILE = LooDocProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E2DD9C511AB1704A00658A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LooDocProviderFileProvider/LooDocProviderFileProvider.entitlements;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LooDocProviderFileProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E2DD9C521AB1704A00658A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = LooDocProviderFileProvider/LooDocProviderFileProvider.entitlements;
+				INFOPLIST_FILE = LooDocProviderFileProvider/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -568,6 +794,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E2DD9C531AB1704A00658A06 /* Build configuration list for PBXNativeTarget "LooDocProviderFileProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2DD9C511AB1704A00658A06 /* Debug */,
+				E2DD9C521AB1704A00658A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E2DD9C541AB1704A00658A06 /* Build configuration list for PBXNativeTarget "LooDocProvider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2DD9C4F1AB1704A00658A06 /* Debug */,
+				E2DD9C501AB1704A00658A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
