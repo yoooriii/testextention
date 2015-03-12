@@ -1,11 +1,10 @@
 //
 //  ActionViewController.m
-//  LeeLooExtAction
+//  LLExtAction
 //
-//  Created by 100500 on 11/03/15.
+//  Created by 100500 on 12/03/15.
 //  Copyright (c) 2015 Leonid 100500. All rights reserved.
 //
-
 
 #import "ActionViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
@@ -13,31 +12,17 @@
 @interface ActionViewController ()
 
 @property(strong,nonatomic) IBOutlet UIImageView *imageView;
+@property (nonatomic, retain) IBOutlet UILabel	*label;
 
 @end
 
 @implementation ActionViewController
 
-- (instancetype)init {
-	if ((self=[super init])) {
-		NSLog(@"init");
-	}
-	return self;
-}
-
-- (id)initWithCoder:(NSCoder *)aDecoder {
-	if ((self=[super initWithCoder:aDecoder])) {
-		NSLog(@"initWithCoder");
-	}
-	return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-
 	NSLog(@"3.%s", __PRETTY_FUNCTION__);
 	NSLog(@"ext context: %@\n\n", self.extensionContext);
-    
+
     // Get the item[s] we're handling from the extension context.
     
     // For example, look for an image and place it into an image view.
@@ -63,10 +48,14 @@
                 break;
             }
 			else if ([itemProvider hasItemConformingToTypeIdentifier:(NSString *)kUTTypeURL]) {
-				[itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeURL options:nil completionHandler:^(id<NSSecureCoding> item, NSError *error) {
+				[itemProvider loadItemForTypeIdentifier:(NSString *)kUTTypeURL options:nil completionHandler:^(id<NSSecureCoding, NSObject> item, NSError *error) {
+					dispatch_async(dispatch_get_main_queue(), ^{
+						self.label.text = [item description];
+					});
 					NSLog(@"kUTTypeURL>>: %@", item);
 				}];
 			}
+
         }
         
         if (imageFound) {

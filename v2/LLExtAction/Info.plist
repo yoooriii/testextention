@@ -5,11 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>LooDocProvider</string>
+	<string>LLExtAction Abracadabra</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>leeloo.ext.test.docprovider</string>
+	<string>leeloo.ext.test.act</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -26,22 +26,30 @@
 	<dict>
 		<key>NSExtensionAttributes</key>
 		<dict>
-			<key>UIDocumentPickerModes</key>
-			<array>
-				<string>UIDocumentPickerModeImport</string>
-				<string>UIDocumentPickerModeOpen</string>
-				<string>UIDocumentPickerModeExportToService</string>
-				<string>UIDocumentPickerModeMoveToService</string>
-			</array>
-			<key>UIDocumentPickerSupportedFileTypes</key>
-			<array>
-				<string>public.content</string>
-			</array>
+			<key>NSExtensionActivationRule</key>
+			<dict>
+				<key>NSExtensionActivationSupportsWebPageWithMaxCount</key>
+				<integer>4</integer>
+				<key>NSExtensionActivationSupportsWebURLWithMaxCount</key>
+				<integer>7</integer>
+				<key>NSExtensionActivationSupportsText</key>
+				<integer>6</integer>
+				<key>NSExtensionActivationSupportsImageWithMaxCount</key>
+				<integer>3</integer>
+				<key>NSExtensionActivationSupportsFileWithMaxCount</key>
+				<integer>2</integer>
+				<key>NSExtensionActivationSupportsAttachmentsWithMaxCount</key>
+				<integer>5</integer>
+			</dict>
+			<key>NSExtensionPrincipalClass</key>
+			<string>ActionViewController</string>
+			<key>NSExtensionMainStoryboard</key>
+			<string>MainInterface</string>
 		</dict>
 		<key>NSExtensionMainStoryboard</key>
 		<string>MainInterface</string>
 		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.fileprovider-ui</string>
+		<string>com.apple.ui-services</string>
 	</dict>
 </dict>
 </plist>
