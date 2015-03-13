@@ -14,6 +14,9 @@
 		E288FD661AB24138006CB106 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E288FD651AB24138006CB106 /* Images.xcassets */; };
 		E288FD691AB24138006CB106 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E288FD671AB24138006CB106 /* LaunchScreen.xib */; };
 		E288FD751AB24138006CB106 /* WebDrivenExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E288FD741AB24138006CB106 /* WebDrivenExampleTests.m */; };
+		E288FD811AB259C0006CB106 /* html in Resources */ = {isa = PBXBuildFile; fileRef = E288FD801AB259C0006CB106 /* html */; };
+		E288FD831AB2F557006CB106 /* Readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = E288FD821AB2F557006CB106 /* Readme.txt */; };
+		E288FD851AB2F591006CB106 /* Readme.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E288FD841AB2F591006CB106 /* Readme.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		E288FD6E1AB24138006CB106 /* WebDrivenExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebDrivenExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E288FD731AB24138006CB106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E288FD741AB24138006CB106 /* WebDrivenExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebDrivenExampleTests.m; sourceTree = "<group>"; };
+		E288FD801AB259C0006CB106 /* html */ = {isa = PBXFileReference; lastKnownFileType = folder; path = html; sourceTree = "<group>"; };
+		E288FD821AB2F557006CB106 /* Readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.txt; sourceTree = "<group>"; };
+		E288FD841AB2F591006CB106 /* Readme.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Readme.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,9 @@
 		E288FD571AB24138006CB106 /* WebDrivenExample */ = {
 			isa = PBXGroup;
 			children = (
+				E288FD821AB2F557006CB106 /* Readme.txt */,
+				E288FD841AB2F591006CB106 /* Readme.rtf */,
+				E288FD7E1AB259A8006CB106 /* Resources */,
 				E288FD5C1AB24138006CB106 /* AppDelegate.h */,
 				E288FD5D1AB24138006CB106 /* AppDelegate.m */,
 				E288FD5F1AB24138006CB106 /* ViewController.h */,
@@ -117,6 +126,14 @@
 				E288FD731AB24138006CB106 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E288FD7E1AB259A8006CB106 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E288FD801AB259C0006CB106 /* html */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +216,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E288FD851AB2F591006CB106 /* Readme.rtf in Resources */,
 				E288FD641AB24138006CB106 /* Main.storyboard in Resources */,
+				E288FD811AB259C0006CB106 /* html in Resources */,
 				E288FD691AB24138006CB106 /* LaunchScreen.xib in Resources */,
+				E288FD831AB2F557006CB106 /* Readme.txt in Resources */,
 				E288FD661AB24138006CB106 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +434,7 @@
 				E288FD7A1AB24138006CB106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E288FD7B1AB24138006CB106 /* Build configuration list for PBXNativeTarget "WebDrivenExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +443,7 @@
 				E288FD7D1AB24138006CB106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
