@@ -28,6 +28,8 @@
 	self.webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
 	[self.view addSubview:self.webView];
 	self.webView.delegate = self;
+	
+	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(actBack:)];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -50,6 +52,9 @@
 		return NO;
 	}
 	NSLog(@"yes, should: %@", [request.URL absoluteString]);
+	NSString *strbody = [[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding];
+	NSLog(@"HTTPBody:{%@}", strbody);
+	NSLog(@"%@", request.allHTTPHeaderFields);
 	return YES;
 }
 

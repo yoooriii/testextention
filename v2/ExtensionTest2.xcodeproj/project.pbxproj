@@ -22,8 +22,7 @@
 		6EBDDA7C1AB1F4530058FD96 /* metallica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDDA791AB1F4530058FD96 /* metallica.jpg */; };
 		6EBDDA7D1AB1F4530058FD96 /* metallica.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDDA791AB1F4530058FD96 /* metallica.jpg */; };
 		6EBDDA7F1AB1F7640058FD96 /* ExtIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDDA7E1AB1F7640058FD96 /* ExtIcons.xcassets */; };
-		6EBDDA831AB2008C0058FD96 /* myservicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDDA811AB2008C0058FD96 /* myservicon.png */; };
-		6EBDDA841AB2008C0058FD96 /* myservicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6EBDDA821AB2008C0058FD96 /* myservicon@2x.png */; };
+		E2D533051AB4CB1D00ADBDC2 /* AppIconExt60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2D533041AB4CB1D00ADBDC2 /* AppIconExt60x60@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,8 +78,7 @@
 		6EBDDA781AB1F4530058FD96 /* buratin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = buratin.jpg; sourceTree = "<group>"; };
 		6EBDDA791AB1F4530058FD96 /* metallica.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = metallica.jpg; sourceTree = "<group>"; };
 		6EBDDA7E1AB1F7640058FD96 /* ExtIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ExtIcons.xcassets; sourceTree = "<group>"; };
-		6EBDDA811AB2008C0058FD96 /* myservicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myservicon.png; sourceTree = "<group>"; };
-		6EBDDA821AB2008C0058FD96 /* myservicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myservicon@2x.png"; sourceTree = "<group>"; };
+		E2D533041AB4CB1D00ADBDC2 /* AppIconExt60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIconExt60x60@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,8 +201,7 @@
 		6EBDDA801AB2008C0058FD96 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6EBDDA811AB2008C0058FD96 /* myservicon.png */,
-				6EBDDA821AB2008C0058FD96 /* myservicon@2x.png */,
+				E2D533041AB4CB1D00ADBDC2 /* AppIconExt60x60@2x.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -333,9 +330,8 @@
 			files = (
 				6EBDDA7D1AB1F4530058FD96 /* metallica.jpg in Resources */,
 				6EBDDA6F1AB1E3F50058FD96 /* MainInterface.storyboard in Resources */,
+				E2D533051AB4CB1D00ADBDC2 /* AppIconExt60x60@2x.png in Resources */,
 				6EBDDA7F1AB1F7640058FD96 /* ExtIcons.xcassets in Resources */,
-				6EBDDA841AB2008C0058FD96 /* myservicon@2x.png in Resources */,
-				6EBDDA831AB2008C0058FD96 /* myservicon.png in Resources */,
 				6EBDDA7B1AB1F4530058FD96 /* buratin.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,6 +437,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "9afe52ff-5a01-4da1-8cb3-d9685f458575";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -476,6 +473,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "9afe52ff-5a01-4da1-8cb3-d9685f458575";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -486,11 +484,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yurii Lokhmatov (8NLHH7L7UU)";
 				INFOPLIST_FILE = ExtensionTest2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9afe52ff-5a01-4da1-8cb3-d9685f458575";
+				PROVISIONING_PROFILE = "2d17083f-387c-445d-9053-b0fd79f60d5d";
 			};
 			name = Debug;
 		};
@@ -498,11 +495,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Yurii Lokhmatov (8NLHH7L7UU)";
 				INFOPLIST_FILE = ExtensionTest2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9afe52ff-5a01-4da1-8cb3-d9685f458575";
+				PROVISIONING_PROFILE = "2d17083f-387c-445d-9053-b0fd79f60d5d";
 			};
 			name = Release;
 		};
@@ -550,6 +546,7 @@
 				INFOPLIST_FILE = LLExtAction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2cf3b94c-430a-4427-bfe6-075fe01e97cf";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -560,6 +557,7 @@
 				INFOPLIST_FILE = LLExtAction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2cf3b94c-430a-4427-bfe6-075fe01e97cf";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

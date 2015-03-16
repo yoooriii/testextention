@@ -55,6 +55,9 @@
 					NSLog(@"kUTTypeURL>>: %@", item);
 				}];
 			}
+			else {
+				NSLog(@"undefined item {{{%@}}}", itemProvider.registeredTypeIdentifiers);
+			}
 
         }
         
