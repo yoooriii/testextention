@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "Test2WebVC.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +18,24 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	// Override point for customization after application launch.
+	UIViewController *viewCtr = [Test2WebVC new];
+	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+	self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:viewCtr];
+	[self.window makeKeyAndVisible];
+	return YES;
+}
+
+- (BOOL)application:(UIApplication *)application
+			openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+		 annotation:(id)annotation
+{
+	NSLog(@"URL:%@ : %@; (%@)", url.absoluteString, url.port, url.host);
+	NSLog(@"src-app:%@", sourceApplication);
+	NSLog(@"url-query:{%@}", [url query]);
+	if (annotation) {
+		NSLog(@"ann: %@", annotation);
+	}
 	return YES;
 }
 

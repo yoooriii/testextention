@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E063BEE1AB87C7E001A96EA /* Default-leitziconsdk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6E063BED1AB87C7E001A96EA /* Default-leitziconsdk@2x.png */; };
+		6E063BF01AB88218001A96EA /* page4.html in Resources */ = {isa = PBXBuildFile; fileRef = 6E063BEF1AB88218001A96EA /* page4.html */; };
+		6E063BF21AB883E5001A96EA /* takepicture.js in Resources */ = {isa = PBXBuildFile; fileRef = 6E063BF11AB883E5001A96EA /* takepicture.js */; };
+		6E063BF41AB88DBB001A96EA /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E063BF31AB88DBB001A96EA /* JavaScriptCore.framework */; };
+		6E063BF71AB88FF3001A96EA /* Test2WebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E063BF61AB88FF3001A96EA /* Test2WebVC.m */; };
+		6E063BF91AB89065001A96EA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E063BF81AB89065001A96EA /* WebKit.framework */; };
 		E288FD5B1AB24138006CB106 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E288FD5A1AB24138006CB106 /* main.m */; };
 		E288FD5E1AB24138006CB106 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E288FD5D1AB24138006CB106 /* AppDelegate.m */; };
 		E288FD611AB24138006CB106 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E288FD601AB24138006CB106 /* ViewController.m */; };
-		E288FD641AB24138006CB106 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E288FD621AB24138006CB106 /* Main.storyboard */; };
 		E288FD661AB24138006CB106 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E288FD651AB24138006CB106 /* Images.xcassets */; };
 		E288FD691AB24138006CB106 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E288FD671AB24138006CB106 /* LaunchScreen.xib */; };
 		E288FD751AB24138006CB106 /* WebDrivenExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E288FD741AB24138006CB106 /* WebDrivenExampleTests.m */; };
@@ -29,6 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E063BED1AB87C7E001A96EA /* Default-leitziconsdk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-leitziconsdk@2x.png"; path = "WebDrivenExample/Resources/icons/Default-leitziconsdk@2x.png"; sourceTree = "<group>"; };
+		6E063BEF1AB88218001A96EA /* page4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = page4.html; path = WebDrivenExample/Resources/html/page4.html; sourceTree = "<group>"; };
+		6E063BF11AB883E5001A96EA /* takepicture.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = takepicture.js; path = WebDrivenExample/Resources/html/takepicture.js; sourceTree = "<group>"; };
+		6E063BF31AB88DBB001A96EA /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		6E063BF51AB88FF3001A96EA /* Test2WebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test2WebVC.h; path = classes/Test2WebVC.h; sourceTree = "<group>"; };
+		6E063BF61AB88FF3001A96EA /* Test2WebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test2WebVC.m; path = classes/Test2WebVC.m; sourceTree = "<group>"; };
+		6E063BF81AB89065001A96EA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E288FD551AB24138006CB106 /* WebDrivenExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebDrivenExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E288FD591AB24138006CB106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E288FD5A1AB24138006CB106 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -36,7 +48,6 @@
 		E288FD5D1AB24138006CB106 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E288FD5F1AB24138006CB106 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E288FD601AB24138006CB106 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E288FD631AB24138006CB106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E288FD651AB24138006CB106 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E288FD681AB24138006CB106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		E288FD6E1AB24138006CB106 /* WebDrivenExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebDrivenExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E063BF91AB89065001A96EA /* WebKit.framework in Frameworks */,
+				6E063BF41AB88DBB001A96EA /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +80,11 @@
 		E288FD4C1AB24138006CB106 = {
 			isa = PBXGroup;
 			children = (
+				6E063BF81AB89065001A96EA /* WebKit.framework */,
+				6E063BF31AB88DBB001A96EA /* JavaScriptCore.framework */,
+				6E063BF11AB883E5001A96EA /* takepicture.js */,
+				6E063BEF1AB88218001A96EA /* page4.html */,
+				6E063BED1AB87C7E001A96EA /* Default-leitziconsdk@2x.png */,
 				E288FD571AB24138006CB106 /* WebDrivenExample */,
 				E288FD711AB24138006CB106 /* WebDrivenExampleTests */,
 				E288FD561AB24138006CB106 /* Products */,
@@ -91,7 +109,8 @@
 				E288FD5D1AB24138006CB106 /* AppDelegate.m */,
 				E288FD5F1AB24138006CB106 /* ViewController.h */,
 				E288FD601AB24138006CB106 /* ViewController.m */,
-				E288FD621AB24138006CB106 /* Main.storyboard */,
+				6E063BF51AB88FF3001A96EA /* Test2WebVC.h */,
+				6E063BF61AB88FF3001A96EA /* Test2WebVC.m */,
 				E288FD651AB24138006CB106 /* Images.xcassets */,
 				E288FD671AB24138006CB106 /* LaunchScreen.xib */,
 				E288FD581AB24138006CB106 /* Supporting Files */,
@@ -213,9 +232,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E288FD641AB24138006CB106 /* Main.storyboard in Resources */,
 				E288FD811AB259C0006CB106 /* html in Resources */,
+				6E063BF21AB883E5001A96EA /* takepicture.js in Resources */,
 				E288FD691AB24138006CB106 /* LaunchScreen.xib in Resources */,
+				6E063BF01AB88218001A96EA /* page4.html in Resources */,
+				6E063BEE1AB87C7E001A96EA /* Default-leitziconsdk@2x.png in Resources */,
 				E288FD831AB2F557006CB106 /* Readme.txt in Resources */,
 				E288FD661AB24138006CB106 /* Images.xcassets in Resources */,
 			);
@@ -235,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E063BF71AB88FF3001A96EA /* Test2WebVC.m in Sources */,
 				E288FD611AB24138006CB106 /* ViewController.m in Sources */,
 				E288FD5E1AB24138006CB106 /* AppDelegate.m in Sources */,
 				E288FD5B1AB24138006CB106 /* main.m in Sources */,
@@ -260,14 +282,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E288FD621AB24138006CB106 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E288FD631AB24138006CB106 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E288FD671AB24138006CB106 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

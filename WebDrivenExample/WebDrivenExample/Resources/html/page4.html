@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang=en>
+	<body>
+		<p id="demo">A Paragraph.</p>
+		<button type="button" id="buton1" onclick="testClickFunc('demo')">Try it button</button>
+		<p>page loaded from:</p><p id="testField">url?</p>
+		<h1 id="id1">My Heading 1</h1>
+		<script>var elColor='red'</script>
+		<button type="button" onclick="document.getElementById('id1').style.color = elColor; if(elColor=='red'){elColor='blue';}else{elColor='red';}">Click Me!</button>
+		<h1 onclick="this.innerHTML='Ooops!';console.log('click!');">Click on this text!</h1>
+	</body>
+</html>

@@ -30,6 +30,7 @@
 	self.webView.delegate = self;
 	
 	self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(actBack:)];
+	self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemPlay	target:self action:@selector(actTestUrlScheme:)];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -109,6 +110,11 @@
 
 - (void)actForward:(id)sender {
 	[self.webView goForward];
+}
+
+- (void)actTestUrlScheme:(id)sender {
+	BOOL  success = [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"leitziconsdk://test1?qqq=iii&uuu=ooo"]];
+	NSLog(@"success:%@", success?@"yes":@"no");
 }
 
 - (void)doSomething:(NSString *)text {
