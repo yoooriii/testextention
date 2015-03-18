@@ -8,6 +8,8 @@
 
 #import "Test2WebVC.h"
 #import <WebKit/WebKit.h>
+#import "AppDelegate.h"
+#import "BasicAddressBook.h"
 
 //	read this:
 //	https://github.com/ShingoFukuyama/WKWebViewTips
@@ -19,11 +21,15 @@
 //	http://joshuakehn.com/2014/10/29/using-javascript-with-wkwebview-in-ios-8.html
 
 @interface Test2WebVC ()
-<WKNavigationDelegate, WKUIDelegate>
-@property (nonatomic, retain) WKWebView		*wwView;
+<WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler>
+@property (nonatomic, readonly) WKWebView		*webView;
 @end
 
 @implementation Test2WebVC
+
+- (WKWebView *)webView {
+	return (WKWebView *)self.view;
+}
 
 - (void)loadView {
 
@@ -31,7 +37,6 @@
 	[configuration.userContentController addScriptMessageHandler:self name:@"interOp"];
 	WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, 320, 480) configuration:configuration];
 	self.view = webView;
-	self.wwView = webView;
 	webView.navigationDelegate = self;
 }
 
@@ -45,12 +50,9 @@
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 
-	NSURL *url = [NSURL URLWithString:@"https://sites.google.com/site/crocodilemusher/scriptomatic"];
-	NSString *htmlDir = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"html"];
-	NSString *htmlIndex = [htmlDir stringByAppendingPathComponent:@"index.html"];
-	url = [NSURL fileURLWithPath:htmlIndex];
+	NSURL *url = [AppDlg() indexURL];
 	NSURLRequest *rq = [[NSURLRequest alloc] initWithURL:url];
-	WKNavigation *navigation = [self.wwView loadRequest:rq];
+	WKNavigation *navigation = [self.webView loadRequest:rq];
 	NSLog(@"nav: %@", navigation);
 }
 
@@ -166,7 +168,7 @@
  */
 - (void)webView:(WKWebView *)webView didReceiveAuthenticationChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential *credential))completionHandler
 {
-	NSString *hostName = self.wwView.URL.host;
+	NSString *hostName = self.webView.URL.host;
 
 	NSString *authenticationMethod = [[challenge protectionSpace] authenticationMethod];
 	if ([authenticationMethod isEqualToString:NSURLAuthenticationMethodDefault]
@@ -294,7 +296,7 @@
 
 - (IBAction)actPerformTest1:(id)sender {
 	NSString *script = @" document.getElementById('field_3').value='QWERTYU';";
-	[self.wwView evaluateJavaScript:script completionHandler:^(id obj, NSError *error) {
+	[self.webView evaluateJavaScript:script completionHandler:^(id obj, NSError *error) {
 		if (error) {
 			NSLog(@"ERR:%@", error.localizedDescription);
 		}
@@ -304,6 +306,15 @@
 	}];
 }
 
+
+#pragma mark - WKScriptMessageHandler
+
+/*! @abstract Invoked when a script message is received from a webpage.
+ @param userContentController The user content controller invoking the
+ delegate method.
+ @param message The script message received.
+ */
+
 //	Since ViewController is a WKScriptMessageHandler, as declared in the ViewController interface, it must implement the userContentController:didReceiveScriptMessage method. This is the method that is triggered each time 'interOp' is sent a message from the JavaScript code.
 
 - (void)userContentController:(WKUserContentController *)userContentController
@@ -311,7 +322,7 @@
 	NSDictionary *sentData = (NSDictionary*)message.body;
 	long aCount = [sentData[@"count"] integerValue];
 	aCount++;
-	[self.wwView evaluateJavaScript:[NSString stringWithFormat:@"storeAndShow(%ld)", aCount] completionHandler:nil];
+	[self.webView evaluateJavaScript:[NSString stringWithFormat:@"storeAndShow(%ld)", aCount] completionHandler:nil];
 
 	//	In the example code above you can see a WKScriptMessage is received from JavaScript. Since WKWebKit defines JSON as the data transport protocol, the JavaScript associative array sent as the message's body has already been converted into an NSDictionary before we have access to the message. We can then use this NSDictionary to retrieve an int that is the value associated with the 'count' label. The JSON conversation creates NSNumbers for numeric type values so the code example retrieves the NSNumber's intValue, modifies it, and then sends the modified value back to JavaScript.
 
@@ -319,5 +330,6 @@
 
 
 }
+
 
 @end

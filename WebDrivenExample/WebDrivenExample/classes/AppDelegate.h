@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@class AppDelegate;
+
+AppDelegate * AppDlg();
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, readonly) NSURL	*indexURL;
 
 
 @end

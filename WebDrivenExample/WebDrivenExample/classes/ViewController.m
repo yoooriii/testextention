@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+#import "BasicAddressBook.h"
 
 @interface ViewController ()
 <UIWebViewDelegate, UIAlertViewDelegate>
@@ -36,10 +38,7 @@
 - (void)viewDidAppear:(BOOL)animated {
 	[super viewDidAppear:animated];
 	
-	NSURL *url = [NSURL URLWithString:@"https://sites.google.com/site/crocodilemusher/scriptomatic"];
-	NSString *htmlDir = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"html"];
-	NSString *htmlIndex = [htmlDir stringByAppendingPathComponent:@"index.html"];
-	url = [NSURL fileURLWithPath:htmlIndex];
+	NSURL *url = [AppDlg() indexURL];
 	NSURLRequest *rq = [[NSURLRequest alloc] initWithURL:url];
 	[self.webView loadRequest:rq];
 }
@@ -139,6 +138,17 @@
 	script = @"document.getElementById('field_address').value;";
 	scriptResult = [self.webView stringByEvaluatingJavaScriptFromString:script];
 	NSLog(@"address:{{%@}};", scriptResult);
+}
+
+#pragma mark -
+
+- (void)registerJSObjects {
+	BasicAddressBook *littleBlackBook = [BasicAddressBook addressBook];
+	
+	WebScriptObject
+ 
+	id win = [self.webView windowScriptObject];
+	[win setValue:littleBlackBook forKey:@"AddressBook"];
 }
 
 @end

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  <title>Page Title</title>
+	</head>
+	
+	<body style="background-color:lightgrey">
+		<p>click the button</p>
+		<button type="button" id="butonrequest" onclick="sendRequest()">send request</button>
+		<div id="myDiv"><h2>Let AJAX change this text</h2></div>
+		<div id="error_message"><h2>?error?</h2></div>
+
+		<script>
+		function sendRequest() {
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.open("GET","ajax_info.txt",true);
+			xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xmlhttp.onload = handleOnload;
+			xmlhttp.onerror = handleError;
+			xmlhttp.send();
+		}
+	
+		function handleOnload() {
+			document.getElementById("myDiv").innerHTML=this.responseText;
+			document.getElementById("error_message").innerHTML="OK";
+			return;
+			var data = JSON.parse(this.responseText);
+			console.log(data);
+		}
+		
+		function handleError(err) {
+			document.getElementById("error_message").innerHTML=err;
+		}
+	
+		//	messagng
+		function messageReceive(evt) {
+			if (evt.origin == 'http://example.com') {
+				// The message came from an origin that
+				// your code trusts.  Work with the message.
+				alert('Received data '+evt.data);
+				
+				// Send a message back to the source:
+				evt.source.postMessage('response', evt.origin);
+			} else {
+				alert('unexpected message from origin '+evt.origin);
+			}
+		}
+		window.addEventListener('message', messageReceive, false);
+		</script>
+	</body>
+</html>
